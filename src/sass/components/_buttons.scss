@@ -1,0 +1,19 @@
+@import "../base/typography";
+@import "../base/breakpoint";
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  @include textStyle(400, 16px, 16px);
+
+  @include media("<=phone") {
+    padding: 5px 10px;
+    @include textStyle(500, 14px, 14px);
+  }
+}
+
+.btn-login {
+  margin: 0px 10px;
+}

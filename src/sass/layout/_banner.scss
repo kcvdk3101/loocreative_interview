@@ -1,0 +1,59 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+@import "../base/typography";
+@import "../base/breakpoint";
+
+$banner: url("/src/images/-e-banner_img_1.png");
+
+.banner {
+  @include flex(row, nowrap, flex-start, center);
+  min-height: 500px;
+  background: $banner no-repeat center center;
+  background-size: cover;
+
+  &__content {
+    height: 100%;
+
+    h1 {
+      width: 70%;
+      @include textStyle(500, 35px, 35px);
+      color: $white-color;
+
+      @include media("<=phone") {
+        width: 100%;
+        @include textStyle(500, 28px, 28px);
+      }
+    }
+
+    p {
+      width: 50%;
+      margin-top: 20px;
+      @include textStyle(500, 16px, 16px);
+      color: $para-color;
+
+      @include media("<=phone") {
+        width: 100%;
+        @include textStyle(500, 14px, 20px);
+      }
+    }
+
+    &--action {
+      @include media("<=phone") {
+        font-size: 12px;
+      }
+      span {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $white-color;
+        padding: 10px 15px;
+        font-size: 18px;
+
+        @include media("<=phone") {
+          padding: 10px 15px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+@import "../base/typography";
+@import "../base/breakpoint";
+
+.serial {
+  min-height: 500px;
+  margin: 20px auto 0px auto;
+
+  @include media("<=phone") {
+    min-height: 300px;
+    margin: 0px auto;
+    padding: 20px 0px;
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  #{&}__content {
+    &--subheading {
+      @include textStyle2(400, 14px, 14px);
+      color: $primary-color;
+    }
+
+    &--heading {
+      @include textStyle2(500, 25px, 25px);
+      margin: 8px 0px;
+
+      @include media("<=phone") {
+        margin: 10px 0px;
+        @include textStyle2(400, 22px, 22px);
+      }
+    }
+
+    &--paragraph {
+      @include textStyle2(500, 16px, 16px);
+
+      @include media("<=phone") {
+        margin: 10px 0px;
+        @include textStyle2(400, 16px, 16px);
+        color: $para-color;
+      }
+    }
+  }
+}
+
+.serial-left {
+  @include flex(row, nowrap, space-evenly, center);
+  text-align: left;
+
+  @include media("<=phone") {
+    @include flex(column-reverse, wrap, center, center);
+    text-align: left;
+  }
+}
+
+.serial-right {
+  @include flex(row-reverse, nowrap, space-evenly, center);
+  text-align: right;
+
+  @include media("<=phone") {
+    @include flex(column-reverse, wrap, center, center);
+    text-align: left;
+  }
+}

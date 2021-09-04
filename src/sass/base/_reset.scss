@@ -1,0 +1,20 @@
+@import "../utilities/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.active {
+  border-bottom: 3px solid $primary-color;
+}

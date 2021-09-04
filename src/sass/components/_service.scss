@@ -1,0 +1,59 @@
+@import "../base/typography";
+@import "../utilities/variables";
+@import "../utilities/mixins";
+@import "../base/breakpoint";
+
+.service {
+  min-height: 500px;
+  margin: 50px auto;
+
+  @include media("<=phone") {
+    margin: 20px auto;
+  }
+
+  #{&}__content {
+    &--heading {
+      @include textStyle2(500, 35px, 35px);
+
+      @include media("<=phone") {
+        @include textStyle2(800, 26px, 26px);
+      }
+    }
+
+    &--paragraph {
+      margin: 30px 0px;
+
+      h5 {
+        @include textStyle2(500, 24px, 24px);
+
+        @include media("<=phone") {
+          @include textStyle2(500, 20px, 20px);
+        }
+      }
+      p {
+        @include textStyle2(500, 16px, 16px);
+
+        @include media("<=phone") {
+          margin-top: 10px;
+          @include textStyle2(400, 14px, 14px);
+        }
+      }
+    }
+  }
+}
+
+.service-left {
+  @include flex(row, nowrap, space-around, center);
+
+  @include media("<=phone") {
+    @include flex(column, nowrap, space-around, center);
+  }
+}
+
+.service-right {
+  @include flex(row-reverse, nowrap, space-around, center);
+
+  @include media("<=phone") {
+    @include flex(column, nowrap, space-around, center);
+  }
+}

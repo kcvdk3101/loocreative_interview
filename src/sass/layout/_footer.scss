@@ -1,0 +1,67 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+@import "../base/typography";
+@import "../base/breakpoint";
+
+.footer {
+  @include flex(row, nowrap, space-between, flex-start);
+  margin: 50px auto;
+
+  @include media("<=phone") {
+    @include flex(column, wrap, space-between, center);
+  }
+
+  #{&}-content {
+    p {
+      margin: 10px 0px;
+      @include textStyle2(400, 16px, 20px);
+    }
+    small {
+      @include textStyle2(400, 12px, 12px);
+    }
+    p,
+    small {
+      color: $para-color;
+    }
+
+    &__links {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        @include textStyle2(500, 18px, 18px);
+        color: $black-color;
+      }
+    }
+  }
+
+  #{&}-social {
+    @include flex(row, nowrap, flex-end, center);
+
+    @include media("<=phone") {
+      @include flex(row, nowrap, center, center);
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin-left: 20px;
+
+        @include media("<=phone") {
+          margin: 20px 20px 0px 20px;
+        }
+      }
+    }
+  }
+}
+
+.footer > div {
+  flex: 1;
+}

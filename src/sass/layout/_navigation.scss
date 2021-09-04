@@ -1,0 +1,66 @@
+@import "../base/typography";
+@import "../utilities/mixins";
+@import "../utilities/variables";
+@import "../base/breakpoint";
+
+.navbar {
+  @include flex(row, nowrap, space-between, center);
+  background-color: #b1ccff;
+
+  &__sidebar {
+    display: none;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__links {
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      padding: 20px;
+
+      a {
+        @include textStyle(400, 16px, 16px);
+        color: $black-color;
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+      }
+    }
+  }
+
+  @include media("<=phone") {
+    width: 100%;
+    padding: 10px 0px;
+
+    &__sidebar {
+      display: block;
+      height: 40px;
+      width: 40px;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+
+    &__img {
+      height: 40px;
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__buttons {
+      .btn-login {
+        background-color: $background-color;
+        padding: 10px;
+        border-radius: 5px;
+        color: $primary-color;
+      }
+      .btn-join {
+        display: none;
+      }
+    }
+  }
+}
