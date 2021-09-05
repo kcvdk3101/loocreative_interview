@@ -34,9 +34,9 @@ const Header = () => {
     <div className="container-fluid" style={{ backgroundColor: "#b1ccff" }}>
       <nav className="container navbar">
         <div className="navbar__sidebar">
-          <Menu width={"100px"}>
+          <Menu width={"auto"}>
             {navItems.map((n, i) => (
-              <li key={i} className={i === 0 ? "active" : ""}>
+              <li key={i}>
                 <a href={n.link}>{n.title}</a>
               </li>
             ))}
@@ -54,7 +54,7 @@ const Header = () => {
         </ul>
         <div className="navbar__buttons">
           <button className="btn btn-login">Login</button>
-          <button className="btn btn-join">Join</button>
+          <button className="btn btn-join">Sign up</button>
         </div>
       </nav>
     </div>

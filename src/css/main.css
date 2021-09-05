@@ -937,29 +937,54 @@
   transition: all 0.3s ease 0s;
 }
 
+.navbar .btn-login {
+  background-color: #f4f5f8;
+  padding: 10px;
+  border-radius: 5px;
+  color: #157eff;
+}
+
 @media (max-width: 376px) {
   .navbar {
     width: 100%;
     padding: 10px 0px;
   }
   .navbar__sidebar {
+    position: relative;
     display: block;
     height: 40px;
     width: 40px;
     background-color: #157eff;
     border-radius: 50%;
   }
+  .navbar__sidebar li {
+    margin: 50px 10px;
+  }
+  .navbar__sidebar li a {
+    text-decoration: none;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #157eff;
+  }
+  .navbar__sidebar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 20px;
+    height: 2px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+  }
   .navbar__img {
     height: 40px;
   }
   .navbar__links {
     display: none;
-  }
-  .navbar__buttons .btn-login {
-    background-color: #f4f5f8;
-    padding: 10px;
-    border-radius: 5px;
-    color: #157eff;
   }
   .navbar__buttons .btn-join {
     display: none;
@@ -1097,5 +1122,9 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.bm-overlay {
+  background: black;
 }
 /*# sourceMappingURL=main.css.map */
