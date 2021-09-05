@@ -3,10 +3,10 @@ import Feature from "./components/Feature";
 import Product from "./components/Product";
 import Serial from "./components/Serial";
 import Service from "./components/Service";
-import Subcontent01 from "./components/subcontent/Subcontent01";
-import Subcontent02 from "./components/subcontent/Subcontent02";
+import Content01 from "./components/content/Content01";
+import Content02 from "./components/content/Content02";
 import Footer from "./components/template/Footer";
-import Header from "./components/template/Header";
+import Navigation from "./components/template/Navigation";
 import "./css/main.css";
 import img01 from "./images/-e-img-1.png";
 import img02 from "./images/-e-img-2.png";
@@ -19,7 +19,8 @@ const serial = [
     alt: "First",
     subheading: "First",
     heading: "Lorem ipsum",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi labore facilis laborum delectus asperiores alias placeat reprehenderit inventore tenetur sequi similique vel doloremque, incidunt veritatis odit itaque dicta, odio fugiat!",
   },
   {
     isLightMode: false,
@@ -28,7 +29,8 @@ const serial = [
     alt: "Second",
     subheading: "Second",
     heading: "Lorem ipsum",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi labore facilis laborum delectus asperiores alias placeat reprehenderit inventore tenetur sequi similique vel doloremque, incidunt veritatis odit itaque dicta, odio fugiat!",
   },
   {
     isLightMode: true,
@@ -37,7 +39,8 @@ const serial = [
     alt: "Third",
     subheading: "Third",
     heading: "Lorem ipsum",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi labore facilis laborum delectus asperiores alias placeat reprehenderit inventore tenetur sequi similique vel doloremque, incidunt veritatis odit itaque dicta, odio fugiat!",
   },
   {
     isLightMode: false,
@@ -46,7 +49,8 @@ const serial = [
     alt: "Four",
     subheading: "Four",
     heading: "Lorem ipsum",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi labore facilis laborum delectus asperiores alias placeat reprehenderit inventore tenetur sequi similique vel doloremque, incidunt veritatis odit itaque dicta, odio fugiat!",
   },
 ];
 
@@ -125,10 +129,10 @@ const services = [
 function App() {
   return (
     <div>
-      <Header />
+      <Navigation />
       <Banner />
       <Feature />
-      <Subcontent01 />
+      <Content01 />
       {serial.map((s, index) => (
         <Serial
           key={index}
@@ -141,7 +145,7 @@ function App() {
           content={s.content}
         />
       ))}
-      <Subcontent02 />
+      <Content02 />
       {services.map((service, index) => (
         <Service
           key={index}

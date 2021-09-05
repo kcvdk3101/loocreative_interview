@@ -189,7 +189,7 @@
 
 .service .service__content--heading {
   font-family: "Noto Sans KR";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 35px;
   line-height: 35px;
 }
@@ -205,6 +205,7 @@
 
 .service .service__content--paragraph {
   margin: 30px 0px;
+  text-align: justify;
 }
 
 .service .service__content--paragraph h5 {
@@ -224,15 +225,17 @@
 }
 
 .service .service__content--paragraph p {
+  margin-top: 10px;
   font-family: "Noto Sans KR";
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+  color: #ccc;
 }
 
 @media (max-width: 376px) {
   .service .service__content--paragraph p {
-    margin-top: 10px;
+    margin-top: 5px;
     font-family: "Noto Sans KR";
     font-weight: 400;
     font-size: 14px;
@@ -310,8 +313,26 @@
 *
 **/
 .serial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 500px;
   margin: 20px auto 0px auto;
+}
+
+.serial img {
+  width: 50%;
+  border-radius: 5px;
 }
 
 @media (max-width: 376px) {
@@ -323,6 +344,17 @@
   .serial img {
     width: 100%;
     border-radius: 5px;
+  }
+}
+
+.serial .serial__content {
+  width: 40%;
+  text-align: justify;
+}
+
+@media (max-width: 376px) {
+  .serial .serial__content {
+    width: 100%;
   }
 }
 
@@ -361,7 +393,7 @@
 
 @media (max-width: 376px) {
   .serial .serial__content--paragraph {
-    margin: 10px 0px;
+    margin: 15px 0px;
     font-family: "Noto Sans KR";
     font-weight: 400;
     font-size: 16px;
@@ -447,7 +479,7 @@
 * Testing
 *
 **/
-.subcontent {
+.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,7 +495,7 @@
           align-items: center;
 }
 
-.subcontent small {
+.content small {
   font-family: "Noto Sans KR";
   font-weight: 400;
   font-size: 14px;
@@ -471,7 +503,7 @@
   color: #157eff;
 }
 
-.subcontent h1 {
+.content h1 {
   font-family: "Noto Sans KR";
   font-weight: 400;
   font-size: 32px;
@@ -480,16 +512,16 @@
 }
 
 @media (max-width: 376px) {
-  .subcontent h1 {
+  .content h1 {
     margin: 15px 0px;
     font-family: "Noto Sans KR";
-    font-weight: 400;
+    font-weight: 700;
     font-size: 24px;
     line-height: 24px;
   }
 }
 
-.subcontent .subcontent__active {
+.content .content__active {
   width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -515,7 +547,7 @@
 }
 
 @media (max-width: 376px) {
-  .subcontent .subcontent__active {
+  .content .content__active {
     width: 150px;
     font-family: "Noto Sans KR";
     font-weight: 400;
@@ -529,7 +561,7 @@
 * Testing
 *
 **/
-.subcontent-02 {
+.content-02 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,7 +580,7 @@
 }
 
 @media (max-width: 376px) {
-  .subcontent-02 {
+  .content-02 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -565,7 +597,7 @@
   }
 }
 
-.subcontent-02 .subcontent-02__heading {
+.content-02 .content-02__heading {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -576,7 +608,7 @@
 }
 
 @media (max-width: 376px) {
-  .subcontent-02 .subcontent-02__heading {
+  .content-02 .content-02__heading {
     font-family: "Montserrat";
     font-weight: 800;
     font-size: 24px;
@@ -584,7 +616,7 @@
   }
 }
 
-.subcontent-02 .subcontent-02__paragraph {
+.content-02 .content-02__paragraph {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -592,10 +624,11 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  text-align: justify;
 }
 
 @media (max-width: 376px) {
-  .subcontent-02 .subcontent-02__paragraph {
+  .content-02 .content-02__paragraph {
     -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
@@ -689,6 +722,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
+    color: #ccc;
   }
 }
 
@@ -747,6 +781,9 @@
 }
 
 @media (max-width: 376px) {
+  .feature .feature__list-item {
+    margin: 10px;
+  }
   .feature .feature__list-item img {
     height: 60px;
   }
@@ -760,12 +797,27 @@
   line-height: 16px;
 }
 
+@media (max-width: 376px) {
+  .feature .feature__list-item--title {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .feature .feature__list-item--subtitle {
   text-align: center;
   font-family: "Noto Sans KR";
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
+}
+
+@media (max-width: 376px) {
+  .feature .feature__list-item--subtitle {
+    color: #ccc;
+  }
 }
 
 /**
@@ -824,6 +876,7 @@
 
 .banner__content {
   height: 100%;
+  text-align: justify;
 }
 
 .banner__content h1 {

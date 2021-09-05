@@ -13,7 +13,7 @@
 
   #{&}__content {
     &--heading {
-      @include textStyle2(500, 35px, 35px);
+      @include textStyle2(800, 35px, 35px);
 
       @include media("<=phone") {
         @include textStyle2(800, 26px, 26px);
@@ -22,6 +22,7 @@
 
     &--paragraph {
       margin: 30px 0px;
+      text-align: justify;
 
       h5 {
         @include textStyle2(500, 24px, 24px);
@@ -30,11 +31,14 @@
           @include textStyle2(500, 20px, 20px);
         }
       }
+
       p {
+        margin-top: 10px;
         @include textStyle2(500, 16px, 16px);
+        color: $para-color;
 
         @include media("<=phone") {
-          margin-top: 10px;
+          margin-top: 5px;
           @include textStyle2(400, 14px, 14px);
         }
       }

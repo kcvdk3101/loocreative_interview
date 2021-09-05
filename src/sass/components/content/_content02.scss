@@ -1,9 +1,9 @@
-@import "../utilities/variables";
-@import "../utilities/mixins";
-@import "../base/typography";
-@import "../base/breakpoint";
+@import "../../utilities/variables";
+@import "../../utilities/mixins";
+@import "../../base/typography";
+@import "../../base/breakpoint";
 
-.subcontent-02 {
+.content-02 {
   @include flex(row, nowrap, space-evenly, flex-start);
   padding: 50px 0px;
   color: $white-color;
@@ -23,6 +23,7 @@
   #{&}__paragraph {
     flex: 1;
     @include textStyle(400, 16px, 16px);
+    text-align: justify;
 
     @include media("<=phone") {
       flex: 0;

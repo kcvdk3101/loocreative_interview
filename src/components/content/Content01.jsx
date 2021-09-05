@@ -1,15 +1,15 @@
 import React from "react";
 
-const Subcontent01 = () => {
+const Content01 = () => {
   return (
     <div
       className="container-fluid"
       style={{ backgroundColor: "#f4f5f8", padding: "50px 0px" }}
     >
-      <div className="container subcontent">
+      <div className="container content">
         <small>Lorem ipsum dolor sit amet</small>
         <h1>Lorem ipsum dolor sit.</h1>
-        <div className="subcontent__active">
+        <div className="content__active">
           <p>Lorem ipsum</p>
           <i className="fas fa-chevron-right"></i>
         </div>
@@ -18,4 +18,4 @@ const Subcontent01 = () => {
   );
 };
 
-export default Subcontent01;
+export default Content01;

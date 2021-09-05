@@ -4,8 +4,14 @@
 @import "../base/breakpoint";
 
 .serial {
+  @include flex(row, nowrap, space-between, center);
   min-height: 500px;
   margin: 20px auto 0px auto;
+
+  img {
+    width: 50%;
+    border-radius: 5px;
+  }
 
   @include media("<=phone") {
     min-height: 300px;
@@ -19,6 +25,13 @@
   }
 
   #{&}__content {
+    width: 40%;
+    text-align: justify;
+
+    @include media("<=phone") {
+      width: 100%;
+    }
+
     &--subheading {
       @include textStyle2(400, 14px, 14px);
       color: $primary-color;
@@ -38,7 +51,7 @@
       @include textStyle2(500, 16px, 16px);
 
       @include media("<=phone") {
-        margin: 10px 0px;
+        margin: 15px 0px;
         @include textStyle2(400, 16px, 16px);
         color: $para-color;
       }

@@ -29,7 +29,7 @@ const navItems = [
   },
 ];
 
-const Header = () => {
+const Navigation = () => {
   return (
     <div className="container-fluid" style={{ backgroundColor: "#b1ccff" }}>
       <nav className="container navbar">
@@ -61,4 +61,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navigation;
