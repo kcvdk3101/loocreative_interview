@@ -13,21 +13,25 @@
   }
 
   h1 {
-    @include textStyle2(400, 28px, 28px);
+    @include textStyle2(800, 28px, 28px);
 
     @include media("<=phone") {
-      @include textStyle2(500, 24px, 24px);
+      @include textStyle2(800, 24px, 24px);
     }
   }
 
   h3 {
-    margin: 10px 0px;
-    @include textStyle2(400, 16px, 20px);
+    width: 33%;
+    margin-top: 10px;
+    @include textStyle2(400, 16px, 16px);
+    text-align: justify;
     color: $para-color;
 
     @include media("<=phone") {
-      margin: 0px;
-      text-align: center;
+      width: 100%;
+      margin: 10px 0px;
+      text-align: justify;
+      @include textStyle2(400, 14px, 18px);
     }
   }
 
@@ -40,11 +44,12 @@
     }
 
     h5 {
-      @include textStyle2(400, 18px, 36px);
+      margin: 10px 0px;
+      @include textStyle2(500, 20px, 20px);
     }
 
     p {
-      @include textStyle2(400, 16px, 16px);
+      @include textStyle2(400, 14px, 14px);
     }
 
     &-left,
@@ -81,6 +86,7 @@
 
     @include media("<=phone") {
       width: 150px;
+      margin-top: 15px;
       @include textStyle2(400, 14px, 14px);
     }
   }

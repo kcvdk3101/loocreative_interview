@@ -12,7 +12,12 @@ const Product = () => {
     <div className="container-fluid" style={{ backgroundColor: "#f4f5f8" }}>
       <div className="container product">
         <h1>Heading</h1>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+        <h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
+          consequatur harum iusto odio hic perferendis? Accusantium, facilis nam
+          sit dolore, eos illum mollitia laudantium tempore laborum unde placeat
+          asperiores itaque.
+        </h3>
         <div className="product__feature">
           <div className="product__feature-left">
             <div>

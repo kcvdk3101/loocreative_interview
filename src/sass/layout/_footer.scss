@@ -14,10 +14,19 @@
   #{&}-content {
     p {
       margin: 10px 0px;
-      @include textStyle2(400, 16px, 20px);
+      @include textStyle2(500, 16px, 20px);
+      text-align: justify;
+
+      @include media("<=phone") {
+        @include textStyle2(500, 14px, 16px);
+      }
     }
     small {
       @include textStyle2(400, 12px, 12px);
+
+      @include media("<=phone") {
+        @include textStyle2(500, 10px, 10px);
+      }
     }
     p,
     small {
@@ -34,8 +43,12 @@
 
       a {
         text-decoration: none;
-        @include textStyle2(500, 18px, 18px);
+        @include textStyle2(800, 18px, 18px);
         color: $black-color;
+
+        @include media("<=phone") {
+          @include textStyle2(800, 16px, 16px);
+        }
       }
     }
   }
@@ -56,6 +69,12 @@
 
         @include media("<=phone") {
           margin: 20px 20px 0px 20px;
+        }
+
+        img {
+          @include media("<=phone") {
+            height: 25px;
+          }
         }
       }
     }

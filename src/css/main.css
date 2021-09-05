@@ -50,7 +50,7 @@
 
 .product h1 {
   font-family: "Noto Sans KR";
-  font-weight: 400;
+  font-weight: 800;
   font-size: 28px;
   line-height: 28px;
 }
@@ -58,25 +58,32 @@
 @media (max-width: 376px) {
   .product h1 {
     font-family: "Noto Sans KR";
-    font-weight: 500;
+    font-weight: 800;
     font-size: 24px;
     line-height: 24px;
   }
 }
 
 .product h3 {
-  margin: 10px 0px;
+  width: 33%;
+  margin-top: 10px;
   font-family: "Noto Sans KR";
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
+  text-align: justify;
   color: #ccc;
 }
 
 @media (max-width: 376px) {
   .product h3 {
-    margin: 0px;
-    text-align: center;
+    width: 100%;
+    margin: 10px 0px;
+    text-align: justify;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
@@ -102,17 +109,18 @@
 }
 
 .product .product__feature h5 {
+  margin: 10px 0px;
   font-family: "Noto Sans KR";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 36px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .product .product__feature p {
   font-family: "Noto Sans KR";
   font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 @media (max-width: 376px) {
@@ -164,6 +172,7 @@
 @media (max-width: 376px) {
   .product .product__active {
     width: 150px;
+    margin-top: 15px;
     font-family: "Noto Sans KR";
     font-weight: 400;
     font-size: 14px;
@@ -1087,9 +1096,19 @@
 .footer .footer-content p {
   margin: 10px 0px;
   font-family: "Noto Sans KR";
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+  text-align: justify;
+}
+
+@media (max-width: 376px) {
+  .footer .footer-content p {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .footer .footer-content small {
@@ -1097,6 +1116,15 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
+}
+
+@media (max-width: 376px) {
+  .footer .footer-content small {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 .footer .footer-content p,
@@ -1116,10 +1144,19 @@
 .footer .footer-content__links a {
   text-decoration: none;
   font-family: "Noto Sans KR";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 18px;
   line-height: 18px;
   color: #000;
+}
+
+@media (max-width: 376px) {
+  .footer .footer-content__links a {
+    font-family: "Noto Sans KR";
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .footer .footer-social {
@@ -1168,6 +1205,12 @@
 @media (max-width: 376px) {
   .footer .footer-social ul li {
     margin: 20px 20px 0px 20px;
+  }
+}
+
+@media (max-width: 376px) {
+  .footer .footer-social ul li img {
+    height: 25px;
   }
 }
 
